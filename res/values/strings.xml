@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExampleCode</string>
+    <string name="friend">Friend</string>
+    <string name="on_the_left">On the left</string>
+    <string name="on_the_right">On the right</string>
+    <string name="main_screen_title">UI Examples</string>
+</resources>
