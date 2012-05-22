@@ -1,0 +1,13 @@
+<resources>
+    <declare-styleable name="RoundedCornerImage">
+        <attr name="placeHolder" format="integer"/>
+        <attr name="image" format="integer" />
+        <attr name="cornerRadius" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="MaskedView">
+        <attr name="mask" format="integer"/>
+        <attr name="imageToMask" format="integer" />
+        <attr name="image_overlay" format="integer" />
+    </declare-styleable>
+</resources>

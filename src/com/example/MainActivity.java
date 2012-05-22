@@ -20,9 +20,7 @@ public class MainActivity extends RoboActivity
         setContentView(R.layout.main);
 
         exampleText.setText( R.string.friend );
-        
 
-        
         bubbleButton.setOnClickListener( new View.OnClickListener() {
             int pressedTimes = 0;
             @Override

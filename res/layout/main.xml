@@ -1,118 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#6a9938"
-    >
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/main_screen_title"
-        android:textSize="25sp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        />
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:example="http://schemas.android.com/apk/res/com.example"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
     <LinearLayout
+
+        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:layout_margin="15dp"
-        android:background="@drawable/rounded_corners_white"
-        android:orientation="vertical">
+        android:layout_height="fill_parent"
+        android:background="#FF0000"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/main_screen_title"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/rounded_corners_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/on_the_left"
+                    android:textStyle="bold"
+                    android:textColor="#707070"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="\u2022"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/on_the_right"
+                    android:textStyle="bold"
+                    android:textColor="#707070"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/exampleText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#707070"
+                />
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="30dp">
+
+            <Button
+                android:id="@+id/bubble_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inbox Foo Bar"
+                android:background="@drawable/dark_button"
+                android:textColor="#FFFFFF"
+                />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/count_bubble"
+                    android:gravity="center"
+                    android:layout_gravity="right"
+                    android:padding="4dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
+                    >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="45"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="4pt"
+                        />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp">
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/on_the_left"
-                android:textStyle="bold"
-                android:textColor="#707070"
+            <com.example.view.RoundedCornerImage
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    example:image="@drawable/groupon_logo"
+                    example:placeHolder="@drawable/groupon_logo"
+                    example:cornerRadius="4"
+                    />
+
+            <com.example.view.MaskedView
+                android:layout_width="240dp"
+                android:layout_height="246dp"
+                example:mask="@drawable/square_clip"
+                example:imageToMask="@drawable/goods"
+                example:image_overlay="@drawable/square_overlay"
                 />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:text="\u2022"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/on_the_right"
-                android:textStyle="bold"
-                android:textColor="#707070"
-                />
 
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/exampleText"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textStyle="bold"
-            android:textColor="#707070"
-            />
-
 
     </LinearLayout>
 
 
-    <FrameLayout
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:padding="30dp">
-
-        <Button
-            android:id="@+id/bubble_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inbox"
-            android:background="@drawable/dark_button"
-            android:textColor="#FFFFFF"
-            />
-
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/count_bubble"
-                android:gravity="center"
-                android:layout_gravity="right"
-                android:padding="4dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginTop="2dp"
-                >
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="45"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:textSize="4pt"
-                    />
-
-        </LinearLayout>
-
-    </FrameLayout>
-
-
-
-
-
-
-
-
-
-
-</LinearLayout>
-
+</ScrollView>
